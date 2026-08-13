@@ -1,15 +1,16 @@
 {
-  "name": "SNB",
-  "short_name": "SNB",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0b4fc7",
-  "icons": [
-    {
-      "src": "snb.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    }
+  "name":"SNB",
+  "short_name":"SNB",
+  "description":"SNB · SKKU 스프레드시트 바로가기",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"portrait",
+  "background_color":"#ffffff",
+  "theme_color":"#0b4fc7",
+  "icons":[
+    {"src":"snb.png","sizes":"180x180","type":"image/png","purpose":"any maskable"},
+    {"src":"snb-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"snb-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ]
 }
