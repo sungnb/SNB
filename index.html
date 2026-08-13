@@ -3,53 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#1d1e21">
+<meta name="theme-color" content="#0b4fc7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SNB">
+<link rel="icon" type="image/png" sizes="180x180" href="snb.png">
+<link rel="apple-touch-icon" sizes="180x180" href="snb.png">
+<link rel="manifest" href="manifest.json">
 <title>SNB · SKKU</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Malgun Gothic",sans-serif;background:#1d1e21}
-body{padding:22px 12px 40px}.page{width:100%;max-width:780px;margin:0 auto;background:#fff;padding:22px 18px 32px;border-radius:2px;box-shadow:0 8px 30px rgba(0,0,0,.35)}
-.section-title{margin:0 0 20px;height:70px;display:flex;align-items:center;padding:0 20px;color:#fff;font-size:34px;font-weight:900;letter-spacing:3px;border-radius:2px;background:linear-gradient(180deg,#1717a9,#08089a);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
-.section-title.skku{margin-top:34px;background:linear-gradient(180deg,#1556a5,#0b3f87)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.link-btn{position:relative;min-height:88px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 8px;text-decoration:none;color:#050505;font-size:25px;font-weight:900;line-height:1.2;border-radius:22px;border:2px solid rgba(115,80,88,.55);background:linear-gradient(180deg,#f8dce1 0%,#efc0c9 34%,#e5aab5 65%,#d996a4 100%);box-shadow:0 7px 0 #b87986,0 10px 14px rgba(0,0,0,.24),inset 0 2px 2px rgba(255,255,255,.98),inset 0 -4px 6px rgba(105,55,65,.20);transition:transform .10s ease,box-shadow .10s ease,filter .10s ease;overflow:hidden}
-.link-btn:after{content:"";position:absolute;left:5%;right:5%;bottom:6px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);filter:blur(2px);pointer-events:none}
-.link-btn:before{content:"";position:absolute;left:10%;right:10%;top:7px;height:24%;border-radius:50%;background:rgba(255,255,255,.35);filter:blur(3px);pointer-events:none}.link-btn span{position:relative;z-index:1;word-break:keep-all}.link-btn:active{transform:translateY(6px) scale(.985);box-shadow:0 2px 0 #b87986,0 4px 7px rgba(0,0,0,.20),inset 0 2px 3px rgba(255,255,255,.75),inset 0 -3px 5px rgba(105,55,65,.22);filter:brightness(.95)}
-.snb-green{box-shadow:0 7px 0 #91a76c,0 10px 14px rgba(0,0,0,.24),inset 0 2px 2px rgba(255,255,255,.98),inset 0 -4px 6px rgba(80,95,45,.18);background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.15) 16%,rgba(255,255,255,0) 30%),linear-gradient(180deg,#dcecc5,#c8dda9 48%,#b7ce91);border-color:rgba(110,125,75,.48)}
-.snb-blue{box-shadow:0 7px 0 #7899c2,0 10px 14px rgba(0,0,0,.24),inset 0 2px 2px rgba(255,255,255,.98),inset 0 -4px 6px rgba(55,80,120,.18);background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.15) 16%,rgba(255,255,255,0) 30%),linear-gradient(180deg,#c8dcf6,#aec9eb 48%,#98b8df);border-color:rgba(75,105,145,.48)}
-.skku-btn{box-shadow:0 7px 0 #789db5,0 10px 14px rgba(0,0,0,.24),inset 0 2px 2px rgba(255,255,255,.98),inset 0 -4px 6px rgba(55,80,100,.18);background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.15) 16%,rgba(255,255,255,0) 30%),linear-gradient(180deg,#c8e3f2,#afd2e7 48%,#98c1dc);border-color:rgba(70,105,130,.48)}
-.footer{margin-top:28px;text-align:center;color:#999;font-size:13px}
-@media(max-width:600px){body{padding:10px 7px 28px}.page{padding:13px 10px 25px}.section-title{height:58px;margin-bottom:14px;padding:0 16px;font-size:28px;letter-spacing:2px}.section-title.skku{margin-top:27px}.grid{gap:11px 10px}.link-btn{min-height:72px;padding:8px 5px;border-radius:18px;font-size:20px;box-shadow:0 5px 0 #b87986,0 7px 10px rgba(0,0,0,.22),inset 0 2px 2px rgba(255,255,255,.98),inset 0 -3px 5px rgba(105,55,65,.18)}}
-@media(max-width:380px){.link-btn{min-height:66px;font-size:18px;border-radius:16px}.section-title{font-size:25px}}
+html,body{margin:0;padding:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Malgun Gothic",sans-serif;background:#1b1c1f}
+body{padding:14px 8px 34px}
+.page{width:100%;max-width:780px;margin:auto;background:#fff;padding:16px 12px 30px;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.title{height:64px;margin:0 0 18px;padding:0 18px;display:flex;align-items:center;color:#fff;font-size:31px;font-weight:900;letter-spacing:2px;background:linear-gradient(#1818b1,#08089a);border-radius:3px;box-shadow:inset 0 1px rgba(255,255,255,.35)}
+.title.skku{margin-top:30px;background:linear-gradient(#155fb5,#0a438c)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px 14px}
+.btn{position:relative;min-height:86px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 6px;color:#050505;text-decoration:none;font-size:24px;font-weight:900;line-height:1.18;word-break:keep-all;border-radius:23px;border:2px solid rgba(100,75,80,.45);background:linear-gradient(180deg,#f8dce2 0%,#f1c2cb 38%,#df9da9 100%);box-shadow:inset 0 4px 5px rgba(255,255,255,.95),inset 0 -7px 8px rgba(100,45,55,.18),0 5px 0 #b97984,0 7px 10px rgba(0,0,0,.22);transition:transform .1s,box-shadow .1s,filter .1s}
+.btn:before{content:"";position:absolute;left:9%;right:9%;top:7px;height:22%;border-radius:50%;background:rgba(255,255,255,.42);filter:blur(2px)}
+.btn span{position:relative;z-index:1}
+.btn:active{transform:translateY(5px);box-shadow:inset 0 3px 4px rgba(255,255,255,.7),inset 0 -3px 5px rgba(80,40,50,.18),0 1px 0 #b97984,0 2px 5px rgba(0,0,0,.2);filter:brightness(.96)}
+.green{background:linear-gradient(180deg,#e8f3d9 0%,#d7e9bc 38%,#b9d191 100%);border-color:rgba(100,115,65,.45);box-shadow:inset 0 4px 5px rgba(255,255,255,.95),inset 0 -7px 8px rgba(70,90,35,.16),0 5px 0 #98b171,0 7px 10px rgba(0,0,0,.22)}
+.green:active{box-shadow:inset 0 3px 4px rgba(255,255,255,.7),inset 0 -3px 5px rgba(70,90,35,.18),0 1px 0 #98b171,0 2px 5px rgba(0,0,0,.2)}
+.blue{background:linear-gradient(180deg,#dceafa 0%,#c5dbf5 38%,#9dbce4 100%);border-color:rgba(65,95,135,.45);box-shadow:inset 0 4px 5px rgba(255,255,255,.95),inset 0 -7px 8px rgba(55,80,120,.17),0 5px 0 #7e9fc9,0 7px 10px rgba(0,0,0,.22)}
+.blue:active{box-shadow:inset 0 3px 4px rgba(255,255,255,.7),inset 0 -3px 5px rgba(55,80,120,.18),0 1px 0 #7e9fc9,0 2px 5px rgba(0,0,0,.2)}
+.footer{text-align:center;color:#aaa;font-size:12px;margin-top:28px}
+@media(max-width:600px){body{padding:8px 5px 24px}.page{padding:11px 8px 24px}.title{height:56px;margin-bottom:14px;padding:0 14px;font-size:27px}.title.skku{margin-top:25px}.grid{gap:13px 9px}.btn{min-height:72px;font-size:19px;border-radius:19px;box-shadow:inset 0 3px 4px rgba(255,255,255,.95),inset 0 -6px 7px rgba(0,0,0,.12),0 4px 0 #b97984,0 6px 8px rgba(0,0,0,.2)}}
+@media(max-width:380px){.btn{font-size:17px;min-height:66px}.title{font-size:24px}}
 </style>
 </head>
-<body><main class="page">
-<h1 class="section-title">SNB</h1>
+<body>
+<main class="page">
+<h1 class="title">SNB</h1>
 <div class="grid">
-<a class="link-btn" href="https://docs.google.com/spreadsheets/d/119bp-RfCDhu2xWR74Y3BiQs8KvW23YIVDKRAfjUBlq4/edit?usp=drive_link" target="_blank" rel="noopener"><span>생활 관리</span></a>
-<a class="link-btn" href="https://docs.google.com/spreadsheets/d/1K_yPAVFmBosV83ow5t4lgCtXeiCqzuXJ-Rya03qw6oI/edit?usp=drive_link" target="_blank" rel="noopener"><span>구입·집수리</span></a>
-<a class="link-btn" href="https://docs.google.com/spreadsheets/d/1zvoc7TlbYeq8OfAVjLGwetJ4wa2NO-7NHT1JXrC1gaU/edit?usp=drive_link" target="_blank" rel="noopener"><span>자동차</span></a>
-<a class="link-btn" href="https://docs.google.com/spreadsheets/d/1khhs0tKvGbrvS4ASQOtR7aDl0veGfjnBApSAYebE6g0/edit?usp=drive_link" target="_blank" rel="noopener"><span>가계부</span></a>
-<a class="link-btn" href="https://docs.google.com/spreadsheets/d/16wew1gZXlqTOTcAllddVHJs_TA32G3juAycV1TQFEHo/edit?usp=sharing" target="_blank" rel="noopener"><span>북부 SNB</span></a>
-<a class="link-btn" href="https://docs.google.com/spreadsheets/d/1o4HQQ2K9SykMTW1nyndvyMkkQf60R64d6tWLgNxU5nE/edit?usp=drive_link" target="_blank" rel="noopener"><span>운영위원회</span></a>
-<a class="link-btn snb-green" href="https://docs.google.com/spreadsheets/d/1c5JZAiDH8B7I0goNMRO1dTFB0DSDvVBHgl3YBwCtpro/edit?usp=drive_link" target="_blank" rel="noopener"><span>M 시트함수</span></a>
-<a class="link-btn snb-green" href="https://docs.google.com/spreadsheets/d/1m3KDzFqt-xVoldgvy2C19NLH1DZ31jJfIutX25KOL0g/edit?usp=drive_link" target="_blank" rel="noopener"><span>M 신권양식</span></a>
-<a class="link-btn snb-green" href="https://docs.google.com/spreadsheets/d/1afJwhWAEInxb96QnFGWoLvswOus6C8K_SBu6owsqSwM/edit?usp=drive_link" target="_blank" rel="noopener"><span>M 컴퓨터·폰</span></a>
-<a class="link-btn snb-green" href="https://docs.google.com/spreadsheets/d/10ocWN63pNRDCOaPRGfAR97Y5TNNyIzGOAoIs5VylElE/edit?usp=drive_link" target="_blank" rel="noopener"><span>신권 보물</span></a>
-<a class="link-btn snb-green" href="https://docs.google.com/spreadsheets/d/1qUSiR_ZJWlxfYLmlU64nuMX-GD-f1l6PJtKj4m2WhQ4/edit?usp=drive_link" target="_blank" rel="noopener"><span>신권 기록</span></a>
-<a class="link-btn snb-green" href="https://docs.google.com/spreadsheets/d/1roEJcr9_GBzfhao0xfyj8G042uJHUF3G7tMZjVfQv64/edit?usp=drive_link" target="_blank" rel="noopener"><span>신권내밀</span></a>
-<a class="link-btn snb-blue" href="https://docs.google.com/spreadsheets/d/1DDZyqo23vOaLMTuzwTdOXakvpTUxkR3YFmU910yGMrs/edit?usp=drive_link" target="_blank" rel="noopener"><span>집회참석</span></a>
-<a class="link-btn snb-blue" href="https://docs.google.com/spreadsheets/d/1TghICVA3BX6OBe1S7H71TZoGdl7LcdcYm-h33H8yd3M/edit?usp=drive_link" target="_blank" rel="noopener"><span>집회사회</span></a>
-<a class="link-btn snb-blue" href="https://docs.google.com/spreadsheets/d/1rkavVDY9ED-dh7iGrukTG2VvKtRM5iu6ZTrdb76hfvA/edit?usp=drive_link" target="_blank" rel="noopener"><span>봉사인도</span></a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/119bp-RfCDhu2xWR74Y3BiQs8KvW23YIVDKRAfjUBlq4/edit?usp=drive_link" target="_blank" rel="noopener"><span>생활 관리</span></a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/1K_yPAVFmBosV83ow5t4lgCtXeiCqzuXJ-Rya03qw6oI/edit?usp=drive_link" target="_blank" rel="noopener"><span>구입·집수리</span></a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/1zvoc7TlbYeq8OfAVjLGwetJ4wa2NO-7NHT1JXrC1gaU/edit?usp=drive_link" target="_blank" rel="noopener"><span>자동차</span></a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/1khhs0tKvGbrvS4ASQOtR7aDl0veGfjnBApSAYebE6g0/edit?usp=drive_link" target="_blank" rel="noopener"><span>가계부</span></a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/16wew1gZXlqTOTcAllddVHJs_TA32G3juAycV1TQFEHo/edit?usp=sharing" target="_blank" rel="noopener"><span>북부 SNB</span></a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/1o4HQQ2K9SykMTW1nyndvyMkkQf60R64d6tWLgNxU5nE/edit?usp=drive_link" target="_blank" rel="noopener"><span>운영위원회</span></a>
+<a class="btn green" href="https://docs.google.com/spreadsheets/d/1c5JZAiDH8B7I0goNMRO1dTFB0DSDvVBHgl3YBwCtpro/edit?usp=drive_link" target="_blank" rel="noopener"><span>M 시트함수</span></a>
+<a class="btn green" href="https://docs.google.com/spreadsheets/d/1m3KDzFqt-xVoldgvy2C19NLH1DZ31jJfIutX25KOL0g/edit?usp=drive_link" target="_blank" rel="noopener"><span>M 신권양식</span></a>
+<a class="btn green" href="https://docs.google.com/spreadsheets/d/1afJwhWAEInxb96QnFGWoLvswOus6C8K_SBu6owsqSwM/edit?usp=drive_link" target="_blank" rel="noopener"><span>M 컴퓨터·폰</span></a>
+<a class="btn green" href="https://docs.google.com/spreadsheets/d/10ocWN63pNRDCOaPRGfAR97Y5TNNyIzGOAoIs5VylElE/edit?usp=drive_link" target="_blank" rel="noopener"><span>신권 보물</span></a>
+<a class="btn green" href="https://docs.google.com/spreadsheets/d/1qUSiR_ZJWlxfYLmlU64nuMX-GD-f1l6PJtKj4m2WhQ4/edit?usp=drive_link" target="_blank" rel="noopener"><span>신권 기록</span></a>
+<a class="btn green" href="https://docs.google.com/spreadsheets/d/1roEJcr9_GBzfhao0xfyj8G042uJHUF3G7tMZjVfQv64/edit?usp=drive_link" target="_blank" rel="noopener"><span>신권내밀</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1DDZyqo23vOaLMTuzwTdOXakvpTUxkR3YFmU910yGMrs/edit?usp=drive_link" target="_blank" rel="noopener"><span>집회참석</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1TghICVA3BX6OBe1S7H71TZoGdl7LcdcYm-h33H8yd3M/edit?usp=drive_link" target="_blank" rel="noopener"><span>집회사회</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1rkavVDY9ED-dh7iGrukTG2VvKtRM5iu6ZTrdb76hfvA/edit?usp=drive_link" target="_blank" rel="noopener"><span>봉사인도</span></a>
 </div>
-<h2 class="section-title skku">SKKU</h2>
+<h2 class="title skku">SKKU</h2>
 <div class="grid">
-<a class="link-btn skku-btn" href="https://docs.google.com/spreadsheets/d/1RpRzQQO6yNWARGh9Mk4JtBYEAirPSXzPhwMCJ-Z6JRE/edit?usp=drive_link" target="_blank" rel="noopener"><span>조경 정보</span></a>
-<a class="link-btn skku-btn" href="https://docs.google.com/spreadsheets/d/14K7wfqrdZmonhPPfpMeWo-13YczXoWpYm1UMm_8-uAw/edit?usp=drive_link" target="_blank" rel="noopener"><span>1년 작업</span></a>
-<a class="link-btn skku-btn" href="https://docs.google.com/spreadsheets/d/1_fFuH7DiMl7CThs2gFrqV12wmFeWhQyAKlwhWaysY3w/edit?usp=drive_link" target="_blank" rel="noopener"><span>SKKU-보험</span></a>
-<a class="link-btn skku-btn" href="https://docs.google.com/spreadsheets/d/1qof3iRNwK1cBTZOZW1j-BkIMepIJkVIkhq43my4MZNM/edit?usp=drive_link" target="_blank" rel="noopener"><span>조경 작업</span></a>
-<a class="link-btn skku-btn" href="https://docs.google.com/spreadsheets/d/1gcNkO9qD4AB3CBN6Rj_opyJdZRV9DT2hMBWfIIPJmPQ/edit?usp=drive_link" target="_blank" rel="noopener"><span>물품 구매</span></a>
-<a class="link-btn skku-btn" href="https://docs.google.com/spreadsheets/d/1QQc6U-C3LSp8iZTQ85Uzdh3i-Xvjrqgkn-tlllAQFdY/edit?usp=drive_link" target="_blank" rel="noopener"><span>업무 일지</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1RpRzQQO6yNWARGh9Mk4JtBYEAirPSXzPhwMCJ-Z6JRE/edit?usp=drive_link" target="_blank" rel="noopener"><span>조경 정보</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/14K7wfqrdZmonhPPfpMeWo-13YczXoWpYm1UMm_8-uAw/edit?usp=drive_link" target="_blank" rel="noopener"><span>1년 작업</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1_fFuH7DiMl7CThs2gFrqV12wmFeWhQyAKlwhWaysY3w/edit?usp=drive_link" target="_blank" rel="noopener"><span>SKKU-보험</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1qof3iRNwK1cBTZOZW1j-BkIMepIJkVIkhq43my4MZNM/edit?usp=drive_link" target="_blank" rel="noopener"><span>조경 작업</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1gcNkO9qD4AB3CBN6Rj_opyJdZRV9DT2hMBWfIIPJmPQ/edit?usp=drive_link" target="_blank" rel="noopener"><span>물품 구매</span></a>
+<a class="btn blue" href="https://docs.google.com/spreadsheets/d/1QQc6U-C3LSp8iZTQ85Uzdh3i-Xvjrqgkn-tlllAQFdY/edit?usp=drive_link" target="_blank" rel="noopener"><span>업무 일지</span></a>
 </div>
 <div class="footer">SNB · SKKU</div>
-</main></body></html>
+</main>
+</body>
+</html>
